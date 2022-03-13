@@ -1,10 +1,9 @@
 var http = require("http");
 const PORT = process.env.PORT;
-http
-  .createServer(function (req, res) {
-    res.writeHead(200, { "Content-Type": "text/html" }, "charset=utf-8");
-  })
-  .server.listen(PORT);
+
+http.createServer(function (req, res) {
+  res.writeHead(200, { "Content-Type": "text/html" }, "charset=utf-8");
+});
 
 var express = require("express");
 var fs = require("fs");
@@ -145,6 +144,6 @@ app.get("*", function (req, res) {
   res.status(404).send("Sorry, requested page not found.");
 });
 
-app.listen(8080, function () {
-  console.log("This app is listening on port 8080");
+app.listen(PORT, function () {
+  console.log("This app is listening on port " + PORT);
 });
