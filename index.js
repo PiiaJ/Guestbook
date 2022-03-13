@@ -1,3 +1,11 @@
+var http = require("http");
+const PORT = process.env.PORT;
+http
+  .createServer(function (req, res) {
+    res.writeHead(200, { "Content-Type": "text/html" }, "charset=utf-8");
+  })
+  .server.listen(PORT);
+
 var express = require("express");
 var fs = require("fs");
 var app = express();
